@@ -1,0 +1,26 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Benchmark1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid Background="Gray">
+        <Button x:Name="ClickTest" Background="DarkGray" HorizontalAlignment="Center" Content="System Info" VerticalAlignment="Center" Height="112" Width="300" Click="StartTest" Margin="190,88,-10,568"/>
+        <Button x:Name="DeviceTest" Content="Device Info"  Background="DarkGray" HorizontalAlignment="Left" Height="102" Margin="-10,205,0,0" VerticalAlignment="Top" Width="300" Click="DeviceTest_Click"/>
+        <Button x:Name="Network_Info" Content="Network Info"  Background="DarkGray" HorizontalAlignment="Left" Height="106" Margin="190,312,-10,0" VerticalAlignment="Top" Width="300" Click="NetworkTest_Click"/>
+        <Button x:Name="Float_double" Content="CPU/Memory Test" HorizontalAlignment="Left" Background="DarkGray" Height="102" Margin="-10,423,0,0" VerticalAlignment="Top" Width="300" Click="Button_Click"/>
+        <Button x:Name="performace" Content="Performance Test" HorizontalAlignment="Left" Background="DarkGray" Height="102" Margin="170,529,0,0" VerticalAlignment="Top" Width="300" Click="Button_Click_1"/>
+        <TextBox HorizontalAlignment="Left" Height="88" Margin="40,0,0,0" TextWrapping="Wrap" Text="BenchMark" VerticalAlignment="Top" Width="364" TextAlignment="Center"/>
+    </Grid>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+
+</phone:PhoneApplicationPage>

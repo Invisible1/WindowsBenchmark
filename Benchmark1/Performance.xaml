@@ -1,0 +1,45 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Benchmark1.Performance"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Performance" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Margin="0,0,24,0" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Left" Margin="10,48,0,0" TextWrapping="Wrap" Text="Memory Read Test" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="300,48,0,0" TextWrapping="Wrap" Text="" Name="cpu" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" Text="App's Memory Usage" VerticalAlignment="Top" Width="199"/>
+            <TextBlock HorizontalAlignment="Left" Margin="315,119,0,0" TextWrapping="Wrap" Text="" Name="appmem" VerticalAlignment="Top"/>
+            <Button Content="Start Test" HorizontalAlignment="Left" Margin="0,428,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="272,428,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click_1"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,204,0,0" TextWrapping="Wrap" Text="Peak Memory Usage" VerticalAlignment="Top" Width="212"/>
+            <TextBlock HorizontalAlignment="Left" Margin="300,204,0,0" TextWrapping="Wrap" Text="" Name="peakMem" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="22,294,0,0" TextWrapping="Wrap" Text="Memory Write Test" VerticalAlignment="Top"/>
+            <TextBlock Name="writetest" HorizontalAlignment="Left" Margin="297,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
